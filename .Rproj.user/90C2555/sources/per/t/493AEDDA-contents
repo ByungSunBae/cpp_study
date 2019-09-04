@@ -1,0 +1,45 @@
+---
+title: "Cpp Programming Start"
+output: html_document
+---
+
+# 1. 시작하며..
+
+ - 그동안 C++ 공부를 한다해놓고 미루다가 이대로는 안될거 같아서 그냥 시작하기로했다.
+ - 비개발자이긴 욕심덩어리인 필자는 간단하게라도 코드를 작성하면서 공유를 하려한다.
+ - C++을 하는 이유는 아래와 같다.
+    + Tensorflow Model Deploying 할 때 C++로 하고싶어서
+    + R에서 Rcpp 패키지를 잘 사용하고싶어서
+    + (가장 중요한 이유) IDE에서 코드를 입력할때 너무 이뻐보여서
+ - 3번째 이유는 농담같아보이는데 진짜다.
+    - 마치 노트북이나 키보드가 이뻐서 사는 것처럼...
+ - 책을 보면서 정리도 할 겸 일을 하나 더 늘린것이다.
+    - 교재 : 윤성우의 열혈 C 프로그래밍, 윤성우의 열혈 C++ 프로그래밍
+ - 그리고 R markdown에서 작성성하는 만큼 이왕 하는 거 Rcpp 엔진을 이용해보려한다.
+ - 끝까지 포기하지 않겠다!
+
+<br>
+
+# 2. Hello, World!
+
+ - 대부분 프로그래밍 언어들이 그렇듯이 Hello, World! 를 한번 출력해보고자한다.
+
+```{r engine='Rcpp'}
+#include <Rcpp.h>
+#include <stdio.h>
+
+// [[Rcpp::export]]
+int hey(){
+  printf("Hello World");
+  return 0;
+}
+```
+
+
+## Deployed
+
+```{r}
+hey()
+```
+
+
